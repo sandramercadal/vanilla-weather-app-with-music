@@ -1,0 +1,170 @@
+body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/154/249/original/Screenshot_2025-01-08_at_12.30.02.png?1736339418");
+  background-size: cover;
+  -webkit-animation: slidein 145s;
+  animation: slidein 145s;
+
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+@-webkit-keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
+}
+@keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 33px;
+  text-transform: capitalize;
+  color: #666462;
+}
+h2 {
+  text-align: center;
+  font-size: 47px;
+  line-height: 50%;
+}
+h3 {
+  text-align: center;
+  font-size: 13px;
+  color: #666462;
+}
+h4 {
+  text-align: center;
+  font-size: 22px;
+  line-height: 35px;
+}
+h5 {
+  text-align: center;
+  font-size: 15px;
+  line-height: 50%;
+  color: #352f44;
+}
+#icon {
+  width: 140px;
+  height: 140px;
+  margin-top: -15px;
+}
+
+.footer {
+  font-size: 14px;
+  text-align: center;
+  font-family: barlow;
+  color: #48484a;
+  margin-top: -25px;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 0;
+}
+p:first-letter {
+  text-transform: capitalize;
+}
+
+.d-flex-temp {
+  text-align: center;
+  font-size: 35px;
+  line-height: 130%;
+  color: #666462;
+}
+
+.searchbutton {
+  text-align: center;
+  color: #352f44;
+}
+.search {
+  color: #666462;
+}
+.weathercontainer {
+  margin: 20px auto;
+  display: block;
+  max-width: 480px;
+  background-color: #f9cdd5;
+  opacity: 78%;
+  border-radius: 10px;
+  box-shadow: 15px 10px 15px 5px #4a4e56;
+  font-family: barlow;
+}
+
+.weatherforecast {
+  margin-top: 12px;
+  text-align: center;
+  color: #ec6e4c;
+}
+
+.weather-forecast-date {
+  font-size: 18px;
+  text-align: center;
+}
+
+.weather-forecast-temperature-min {
+  text-align: center;
+  color: #352f44;
+  opacity: 0.6;
+}
+.weather-forecast-temperature-max {
+  text-align: center;
+  color: #352f44;
+  font-weight: bolder;
+}
+.weather-forecast-temperatures {
+  font-size: 15px;
+  text-align: center;
+}
+
+.musiccontainer {
+  margin: 20px auto;
+  display: block;
+  max-width: 480px;
+  background-color: #f9cdd5;
+  opacity: 78%;
+  border-radius: 10px;
+  box-shadow: 15px 10px 15px 5px #4a4e56;
+  font-family: barlow;
+}
+.music-section {
+  padding: 20px;
+  padding-bottom: 5px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 20px;
+}
+.music-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00b894;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.music-link:hover {
+  background: #00a085;
+  color: white;
+  transform: translateY(-2px);
+}

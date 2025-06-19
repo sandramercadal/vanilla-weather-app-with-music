@@ -1,20 +1,19 @@
 function displayForecast(response) {
-  let forecast = response.data.daily;
+  let forecast = response.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 4) {
+    if (index > 0 && index <= 4) {
+      //shows next 4 days and skips today
       forecastHTML =
         forecastHTML +
         `
       <div class="col-2">
      <div class="weather-forecast-date">${formatDay(forecastDay.time)}</div>
       <img
-      src="http://openweathermap.org/img/wn/${
-        forecastDay.weather[0].icon
-      }@2x.png"
-          alt=""
+          src="${forecastDay.condition.icon_url}"
+          alt="${forecastDay.condition.description}"
           width="42"
         />
         <div class="weather-forecast-temperatures">
@@ -35,7 +34,7 @@ function displayForecast(response) {
 }
 
 function formatDate(timestamp) {
-  let date = new Date(timestamp);
+  let date = new Date(timestamp * 1000);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -67,46 +66,9 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-function displayForecast(response) {
-  let forecast = response.data.daily;
-
-  let forecastElement = document.querySelector("#forecast");
-
-  let forecastHTML = `<div class="row">`;
-  forecast.forEach(function (forecastDay, index) {
-    if (index > 0 && index < 7) {
-      forecastHTML =
-        forecastHTML +
-        `
-      <div class="col-2 text-center">      
-        <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-        <img
-          src="http://openweathermap.org/img/wn/${
-            forecastDay.weather[0].icon
-          }@2x.png"
-          alt=""
-          width="42"
-        />
-        <div class="weather-forecast-temperatures">
-          <span class="weather-forecast-temperature-max"> ${Math.round(
-            forecastDay.temp.max
-          )}° </span>
-          <span class="weather-forecast-temperature-min"> ${Math.round(
-            forecastDay.temp.min
-          )}° </span>
-        </div>
-      </div>
-  `;
-    }
-  });
-
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
-}
-
 function getForecast(coordinates) {
-  let apiKey = "f5029b784306910c19746e40c14d6cd3";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiKey = "b88b1f146af7a33abtdd4oddc5070ff6";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -154,8 +116,8 @@ function handleSearch(event) {
 
 //City Search Engine
 function search(city) {
-  let apiKey = "bd3bb6534458ba51b48c49f5155745b6";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiKey = "b88b1f146af7a33abtdd4oddc5070ff6";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
 

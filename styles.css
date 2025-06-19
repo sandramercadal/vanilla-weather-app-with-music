@@ -67,16 +67,6 @@ h5 {
   margin-top: -15px;
 }
 
-.footer {
-  font-size: 14px;
-  text-align: center;
-  font-family: barlow;
-  color: #48484a;
-  margin-top: -25px;
-  cursor: pointer;
-  margin-top: 2px;
-}
-
 p {
   text-align: center;
   margin-bottom: 0;
@@ -147,8 +137,8 @@ p:first-letter {
   font-family: barlow;
 }
 .music-section {
-  padding: 20px;
-  padding-bottom: 5px;
+  padding: 5px;
+  padding-bottom: 1.5px;
   border-radius: 8px;
   text-align: center;
   margin-top: 20px;
@@ -167,4 +157,12 @@ p:first-letter {
   background: #00a085;
   color: white;
   transform: translateY(-2px);
+}
+
+.footer {
+  font-size: 14px;
+  text-align: center;
+  font-family: barlow;
+  color: #48484a;
+  cursor: pointer;
 }

@@ -104,11 +104,7 @@ p:first-letter {
   margin-top: 12px;
   text-align: center;
   color: #ec6e4c;
-}
-
-.weather-forecast-date {
-  font-size: 18px;
-  text-align: center;
+  padding-left: 89px;
 }
 
 .weather-forecast-temperature-min {

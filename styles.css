@@ -104,7 +104,7 @@ p:first-letter {
   margin-top: 12px;
   text-align: center;
   color: #ec6e4c;
-  padding-left: 89px;
+  padding: 0px 10px;
 }
 
 .weather-forecast-temperature-min {

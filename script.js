@@ -4,8 +4,8 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index > 0 && index <= 4) {
-      //shows next 4 days and skips today
+    if (index > 0 && index <= 6) {
+      //shows next 6 days and skips today
       forecastHTML =
         forecastHTML +
         `

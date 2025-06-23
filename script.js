@@ -34,7 +34,7 @@ function displayForecast(response) {
 }
 
 function formatDate(timestamp) {
-  let date = new Date(timestamp * 1000);
+  let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
